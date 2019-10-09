@@ -1,0 +1,50 @@
+Following values needs to be replaced for manually creating Yellow Behaviour subpolicies in carmunk.py file
+
+Replace the following lines in the code with following values as required:
+
+This code can be found at Line 39 and Line 134 in the carmunk.py file.
+
+Line 39
+# Create the car.
+self.create_car(150, 20, 15)
+
+
+Line 134
+
+self.car_body.angle = 1.4
+
+change the matrix with any of the following values and you will find the toy car relocated when you run ManualControl.py file.
+
+Then guide it manually and save the weights of each of the eight sub policies.
+ 
+1) (150, 90, 15) angle=45
+
+2) (150, 550, 15) angle=75
+
+3) (550, 550, 15) angle=75
+
+4) (850, 450, 15) angle=200
+
+5) (250, 90, 15) angle=45
+
+6) (250, 450, 15) angle=75
+
+7) (490, 450, 15) angle=75
+
+8) (750, 350, 15) angle=200
+
+Videos of each subpolicies trained manually using manualContol.py file is also attached along the folder.
+
+Subpolicy weights of yellow behaviour
+
+
+    #Yellow
+    #weights1 = [7.35040544, 3.60496172, 7.5884653,  0.80549137, 9.07478348, 0., 0.,0.]
+    #weights2 = [6.88063122, 1.56921914, 7.07590553, 1.77475487, 7.41832071, 0., 0.38301284, 0.]
+    #weights3 = [7.34416796, 4.9376657,  5.56124196, 0.10350461, 9.00622605, 0., 0.24416116,  0.]
+    #weights4 = [5.3183005, 5.18005207, 7.33148288, 0.3, 7.10040077, 0., 2.01810186, 0.]
+    #weights5 = [7.29522399, 4.65002889, 5.8466103, 0.0716172, 9.1014151, 0.18085951, 0., 0.]
+    #weights6 = [4.92454822, 2.25931731, 4.7688048,  1.35945152, 6.88447411, 0., 0.25512801, 0.]
+    #weights7 = [6.77099717, 4.72090214, 6.37154242, 0.19674179, 9.07159608, 0.08555394, 0., 0.]
+    #weights8 = [4.94460228, 4.06494167, 6.34243495, 0., 4.27988383, 0., 4.052398, 0.]
+

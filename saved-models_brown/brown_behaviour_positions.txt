@@ -1,0 +1,46 @@
+Following values needs to be replaced for manually creating Brown Behaviour subpolicies in carmunk.py file
+
+Replace the following lines in the code with following values as required:
+
+This code can be found at Line 39 and Line 134 in the carmunk.py file.
+
+Line 39
+# Create the car.
+self.create_car(150, 20, 15)
+
+
+Line 134
+
+self.car_body.angle = 1.4
+
+change the matrix with any of the following values and you will find the toy car relocated when you run ManualControl.py file.
+
+Then guide it manually and save the weights of each of the eight sub policies.
+ 
+1) (350, 90, 15) angle=1.4
+
+2) (350, 300, 15) angle=45
+
+3) (150, 640, 15) angle=1.4
+
+4) (600, 640, 15) angle=1.4
+
+5) (930, 580, 15) angle=200
+
+6) (930, 280, 15) angle=200
+
+7) (850, 40, 15) angle=110
+
+8) (550, 40, 15) angle=110
+
+Videos of each subpolicies trained manually using manualContol.py file is also attached along the folder.
+
+
+Sub policy weights of brown behaviour
+
+#Brown
+
+    #weights1 = [6.57112788, 5.39782498, 4.93097789, 0.32772886, 0., 8.17132479, 0., 0.]
+    #weights2 = [7.81412828, 3.99436123, 7.39778354, 0.33929869, 0.53387031, 8.32916656, 0., 0.]
+    #weights3 = [4.24061744, 3.28204294, 4.16343423, 0., 0., 2.62462897,3.88858663, 0.]
+

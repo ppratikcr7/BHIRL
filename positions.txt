@@ -1,0 +1,36 @@
+Following values needs to be replaced for manually creating Red Behaviour subpolicies in carmunk.py file
+
+Replace the following lines in the code with following values as required:
+
+This code can be found at Line 39 and Line 134 in the carmunk.py file.
+
+Line 39
+# Create the car.
+self.create_car(150, 20, 15)
+
+
+Line 134
+
+self.car_body.angle = 1.4
+
+change the matrix with any of the following values and you will find the toy car relocated when you run ManualControl.py file.
+
+Then guide it manually and save the weights of each of the eight sub policies.
+ 
+1) (150, 20, 15) angle=1.4
+
+2) (50, 360, 15) angle=1.4
+
+3) (150, 640, 15) angle=1.4
+
+4) (600, 640, 15) angle=1.4
+
+5) (930, 580, 15) angle=200
+
+6) (930, 280, 15) angle=200
+
+7) (850, 40, 15) angle=110
+
+8) (550, 40, 15) angle=110
+
+Videos of each subpolicies trained manually using manualContol.py file is also attached along the folder.
