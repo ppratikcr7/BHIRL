@@ -1,0 +1,51 @@
+Following values needs to be replaced for manually creating Yellow_Red Behaviour subpolicies in carmunk.py file
+
+Replace the following lines in the code with following values as required:
+
+This code can be found at Line 39 and Line 134 in the carmunk.py file.
+
+Line 39
+# Create the car.
+self.create_car(150, 20, 15)
+
+
+Line 134
+
+self.car_body.angle = 1.4
+
+change the matrix with any of the following values and you will find the toy car relocated when you run ManualControl.py file.
+
+Then guide it manually and save the weights of each of the eight sub policies.
+ 
+1) (150, 90, 15) angle=1.4
+
+2) (150, 650, 15) angle=45
+
+3) (950, 550, 15) angle=75
+
+4) (850, 450, 15) angle=400
+
+5) (250, 90, 15) angle=45
+
+6) (250, 450, 15) angle=75
+
+7) (275, 70, 15) angle=650
+
+8) (500, 450, 15) angle=75
+
+Videos of each subpolicies trained manually using manualContol.py file is also attached along the folder.
+
+Subpolicy weights of yellow_red behaviour
+
+
+    #Yellow_Red
+    #weights1 = [11652.97961532,  3485.28413042, 12282.39687071,  2399.60038426,  6707.39188801,     0.,          6824.0138868,      0.]
+    #weights2 = [12031.28573896,  5419.10727811,  7781.1400124,   2132.72097908,  6818.83310555,     0.,          6991.19670654,     0.]
+    #weights3 = [12967.58314534,  7410.86659565,  8499.74756889,   470.00234186,  3307.63194834,     30.93505122, 11603.11138576,    0.]
+    #weights4 = [12586.132007,    2304.88747211, 10812.66438951,  2419.11783494,  956.13530369,   4913.86688615,  7621.9964967,      0.]
+    #weights5 = [12743.14355538,  7770.24299784,  9350.64798877,   881.3639501, 14983.99461895,     0.,            40.36135716,     0. ]
+    #weights6 = [1.24235415e+04, 8.50571291e+03, 9.60796656e+03, 4.07788882e+02, 1.53639437e+04, 7.74352438e-01, 1.70243844e+02, 0.00000000e+00]
+    #weights7 = [ 9502.54353308,  7529.45366433,  7568.10392051,  1469.28794262, 13938.41670243,     0.,            58.77659731,     0.]
+    #weights8 = [13119.90895308,  6400.97060503, 10154.60393634,   913.36095425, 11620.25905423,    99.08305445,  3091.08456729,     0.]
+
+
