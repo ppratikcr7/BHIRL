@@ -1,7 +1,7 @@
-# Using Inverse Reinforcement Learning to train a toy car in a 2D game to learn given Expert Behaviors
+# Using Bayesian Hierarchical Inverse Reinforcement Learning to train a toy car in a 2D game to learn given Expert Behaviors
 
 **Note: The RL algorithm and the simulation game used is the work of Matthew Harvey. Thank you Matt**
-
+**NOte: The IRL algorithm code used is the work of Jangir Rishab. (https://github.com/jangirrishabh/toyCarIRL). Thank you Rishab. **
 To know more please visit my blog https://jangirrishabh.github.io/2016/07/09/virtual-car-IRL/
 
 
