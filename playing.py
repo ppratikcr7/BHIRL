@@ -15,9 +15,9 @@ from birl import *
 import math
 import curses
 
-
 NUM_STATES = 8
 GAMMA = 0.9
+accuracy = 0
 
 # DAP ################################
 # expert weights of sub policies captured by manual control
@@ -31,11 +31,15 @@ expert_weights_G_to_H = [7.17878922, 3.06259749, 4.81231898, 1.42092422,  0., 3.
 expert_weights_H_to_I = [7.70629269, 3.27166117, 4.75653448, 1.16855854, 2.50979027, 1.11191387, 4.93160894, 0.]
 car_distance = 0
 
+def write_txt(accuracy):
+    with open('out.txt', 'w') as output:
+    	output.write(accuracy)
+
 def play(model, weights, x , y , angle, car_distance):
 
 	game_state = carmunk.GameState(weights)
 	expert_trace = {(0, 1), (0, 2), (0, 3), (0, 4)}
-	_, state, __ = game_state.frame_step((2))
+	_ , state, _ = game_state.frame_step((2))
 
 	# DAP ################################
 	# setting the new position of car based on subpolicy
@@ -142,6 +146,10 @@ def play(model, weights, x , y , angle, car_distance):
 			x = 550
 			y = 40
 			angle = 110
+			#calculating accuracy of reaching the goal position, which requires
+			#minimum of 300 steps
+			accuracy = (300/car_distance)*100
+			write_txt(accuracy)
 			hrlearner = toy_car_HRL.hrlAgent(randomPolicyFE, expert_weights_H_to_I, epsilon, NUM_STATES, FRAMES, BEHAVIOR)
 			print (hrlearner.optimalWeightFinder( x , y , angle, car_distance))
 
@@ -156,9 +164,8 @@ def play(model, weights, x , y , angle, car_distance):
 		if car_distance % 2000 == 0:
 			print("Current distance: %d frames." % car_distance)
 			break
-
-	return featureExpectations
-
+	#INCLUDED ACCURACY IN RETURN
+	return featureExpectations, accuracy
 
 def read(beh, iters, frame):
 	BEHAVIOR = beh
@@ -174,4 +181,5 @@ def read(beh, iters, frame):
 	car_distance = 0
 	expert_weights_A_to_B = [6.4156832,  4.45631171, 5.0337354,  1.44288468, 2.83665219, 0.,4.47014758, 0.]
 	model = neural_net(NUM_STATES, [164, 150], saved_model)
-	print(play(model, expert_weights_A_to_B, x, y, angle, car_distance ))
+	fe, accuracy = play(model, expert_weights_A_to_B, x, y, angle, car_distance)
+	return accuracy
