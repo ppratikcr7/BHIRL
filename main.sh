@@ -12,4 +12,4 @@ python3 setup.py install
 
 cd ..
 
-python3  main.py
+python3  task1a.py

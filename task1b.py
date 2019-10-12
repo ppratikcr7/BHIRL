@@ -6,7 +6,7 @@ import csv
 import numpy as np
 
 #Reading csv for data stored by Demo GUI:
-with open('data.csv', 'r') as f:
+with open('data_dynamic.csv', 'r') as f:
     reader = csv.reader(f)
     table_data = list(reader)
 
@@ -14,10 +14,13 @@ with open('data.csv', 'r') as f:
 fig = ff.create_table(table_data, height_constant=60)
 
 # Fetch data to plot Epochs Vs Accuracy:
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data_dynamic.csv")
 epoch_list = []
 for i, row in enumerate(df["Epochs"]):
-    epoch_list.append(int(row))
+    if(row == "_"):
+        pass
+    else:
+        epoch_list.append(int(row))
 
 max_epoch = max(epoch_list)
 epochs = np.arange(max_epoch+1)
