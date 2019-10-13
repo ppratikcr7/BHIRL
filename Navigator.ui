@@ -164,6 +164,11 @@
      <string>bumping</string>
     </property>
    </item>
+   <item>
+    <property name="text">
+     <string>yellow_red</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="flabel_4">
    <property name="geometry">
@@ -308,6 +313,11 @@
      <string>8</string>
     </property>
    </item>
+   <item>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="flabel_6">
    <property name="geometry">
@@ -345,7 +355,22 @@
    </item>
    <item>
     <property name="text">
+     <string>2000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>3000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3500</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4000</string>
     </property>
    </item>
    <item>
@@ -355,7 +380,32 @@
    </item>
    <item>
     <property name="text">
+     <string>6000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>8000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>100000</string>
     </property>
    </item>
   </widget>

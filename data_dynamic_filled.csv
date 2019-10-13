@@ -1,0 +1,9 @@
+Type,Name,Demos,Accuracy,Time,Assets<br>Updated,Total<br>Episodes,Submitted,Latest<br>Feedback,Epochs
+Learnable,,,,,,,,,_
+,red,1.0,15.01,0.3134 min,1.0,3000.0,0 days,NOT OK,2
+,yellow,1.0,10.01,0.3196 min,4.0,8000.0,0 days,NOT OK,5
+Learnt,,,,,,,,,_
+,red,2.0,15.01,0.3226 min,1.0,3000.0,0 days,OK,3
+,brown,1.0,5.0,0.3068 min,2.0,1000.0,0 days,OK,7
+Extrapolated<br>Skills,,,,,,,,,_
+,bumping,1.0,1.51,0.7997 min,3.0,100000.0,0 days,OK,1

@@ -28,6 +28,7 @@ red_acc = ['0']
 yellow_acc = ['0']
 brown_acc = ['0']
 crash_acc = ['0']
+y_r_acc = ['0']
 
 for i, row in enumerate(df["Name"]):
     if(row == "red"):
@@ -38,6 +39,8 @@ for i, row in enumerate(df["Name"]):
         brown_acc.append(df["Accuracy"][i])
     elif(row == "bumping"):
         crash_acc.append(df["Accuracy"][i])
+    elif(row == "yellow_red"):
+        y_r_acc.append(df["Accuracy"][i])
 
 #Generating traces of plots for all skills:
 trace1 = go.Scatter(x=epochs, y=red_acc,
@@ -58,8 +61,12 @@ trace4 = go.Scatter(x=epochs, y=crash_acc,
                     marker=dict(color='#008000'),
                     name= 'Crash Skill',
                     xaxis='x2', yaxis='y2')
+trace5 = go.Scatter(x=epochs, y=y_r_acc,
+                    marker=dict(color='#0000FF'),
+                    name= 'Yellow_Red Skill',
+                    xaxis='x2', yaxis='y2')
 # Add trace data to figure
-fig.add_traces([trace1, trace2, trace3, trace4])
+fig.add_traces([trace1, trace2, trace3, trace4, trace5])
 
 # initialize xaxis2 and yaxis2
 fig['layout']['xaxis2'] = {}

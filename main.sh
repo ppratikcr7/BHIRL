@@ -1,4 +1,4 @@
-export PATH="/home/parth/anaconda3/bin:$PATH"
+export PATH="/home/pratik/anaconda3/bin:$PATH"
 
 sudo apt install mercurial libfreetype6-dev libsdl-dev libsdl-image1.2-dev libsdl-ttf2.0-dev libsmpeg-dev libportmidi-dev libavformat-dev libsdl-mixer1.2-dev libswscale-dev libjpeg-dev
 

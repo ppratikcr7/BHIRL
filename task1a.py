@@ -83,6 +83,7 @@ class opencvgui(QDialog):
         self.assets = []
         self.data_dynamic_list =['']
         #counter variables for number of demos:
+        self.demo_cnt = 0
         self.red_cnt = 0
         self.yellow_cnt = 0
         self.brown_cnt = 0
@@ -111,7 +112,7 @@ class opencvgui(QDialog):
         self.iteration = None
         self.frames = None
         self.feedback = None
-        self.demo_cnt = None
+        
         self.name = None
         self.a = None
         self.b = None
@@ -176,43 +177,48 @@ class opencvgui(QDialog):
         self.feedback = 'NOT OK'
         self.name = self.nameBox.document().toPlainText()
         self.skill = str(self.skillcomboBox.currentText())
+        self.iteration = str(self.ItCBox.currentText())
         text, cnt = write_json(self.feedback, self.count, self.name, self.skill)
         self.count = cnt
         self.DictionaryBox.append(text + " : " + self.feedback)
         #building rows and writing rows
-        self.data_dynamic_list = update_row(self.data_dynamic_list, self.skill, self.demo_cnt, self.accuracy, self.diff, \
-                   self.asset_updated_cnt, self.frames, self.days, self.feedback, self.iteration)
+        self.data_dynamic_list = update_row(self.data_dynamic_list, self.skill, str(int(self.demo_cnt)), self.accuracy, self.diff, \
+                   str(int(self.asset_updated_cnt)), str(int(self.frames)), self.days, self.feedback, self.iteration)
         write_csv(self, self.data_dynamic_list, self.skill, self.feedback)
         # setting the row list as empty for next demo
         self.data_dynamic_list = ['']
+        self.demo_cnt = 0
 
     def CTBtn(self):
         self.feedback = 'CANT TELL'
         self.name = self.nameBox.document().toPlainText()
         self.skill = str(self.skillcomboBox.currentText())
+        self.iteration = str(self.ItCBox.currentText())
         text, cnt = write_json(self.feedback, self.count, self.name, self.skill)
         self.count = cnt
         self.DictionaryBox.append(text + " : " + self.feedback)
         #building rows and writing rows
-        self.data_dynamic_list = update_row(self.data_dynamic_list, self.skill, self.demo_cnt, self.accuracy, self.diff, \
-                   self.asset_updated_cnt, self.frames, self.days, self.feedback, self.iteration)
-        write_csv(self, self.data_dynamic_list, self.skill, self.feedback)
+        self.data_dynamic_list = update_row(self.data_dynamic_list, self.skill, str(int(self.demo_cnt)), self.accuracy, self.diff, \
+                   str(int(self.asset_updated_cnt)), str(int(self.frames)), self.days, self.feedback, self.iteration)
         # setting the row list as empty for next demo
         self.data_dynamic_list = ['']
+        self.demo_cnt = 0
 
     def OkBtn(self):
         self.feedback = 'OK'
         self.name = self.nameBox.document().toPlainText()
         self.skill = str(self.skillcomboBox.currentText())
+        self.iteration = str(self.ItCBox.currentText())
         text, cnt = write_json(self.feedback, self.count, self.name, self.skill)
         self.count = cnt
         self.DictionaryBox.append(text + " : " + self.feedback)
         #building rows and writing rows
-        self.data_dynamic_list = update_row(self.data_dynamic_list, self.skill, self.demo_cnt, self.accuracy, self.diff, \
-                   self.asset_updated_cnt, self.frames, self.days, self.feedback, self.iteration)
+        self.data_dynamic_list = update_row(self.data_dynamic_list, self.skill, str(int(self.demo_cnt)), self.accuracy, self.diff, \
+                   str(int(self.asset_updated_cnt)), str(int(self.frames)), self.days, self.feedback, self.iteration)
         write_csv(self, self.data_dynamic_list, self.skill, self.feedback)
         # setting the row list as empty for next demo
         self.data_dynamic_list = ['']
+        self.demo_cnt = 0
 
 #runnning Qt App
 app = QApplication(sys.argv)
