@@ -1,0 +1,51 @@
+Following values needs to be replaced for manually creating Yellow_Brown Behaviour subpolicies in carmunk.py file
+
+Replace the following lines in the code with following values as required:
+
+This code can be found at Line 39 and Line 134 in the carmunk.py file.
+
+Line 39
+# Create the car.
+self.create_car(150, 20, 15)
+
+
+Line 134
+
+self.car_body.angle = 1.4
+
+change the matrix with any of the following values and you will find the toy car relocated when you run ManualControl.py file.
+
+Then guide it manually and save the weights of each of the eight sub policies.
+ 
+1) (150, 90, 15) angle=1.4
+
+2) (450, 540, 15) angle=75
+
+3) (235, 90, 15) angle=1.4
+
+4) (450, 440, 15) angle=75
+
+5) (350, 90, 15) angle=1.4
+
+6) (440, 330, 15) angle=75
+
+7) (350, 90, 15) angle=1.4
+
+8) (650, 90, 15) angle=1.4
+
+Videos of each subpolicies trained manually using manualContol.py file is also attached along the folder.
+
+Subpolicy weights of yellow_brown behaviour
+
+
+    #Yellow_Brown
+    #weights1 = [13331.64393412, 10246.97523776,  8079.2130387,    529.51741537, 15344.7579752,      0.,            36.84113092,     0.]
+    #weights2 = [1.22316606e+04, 9.09342334e+03, 7.74028268e+03, 1.01582854e+03, 1.43735481e+04, 1.18023539e+00, 5.48221512e+02, 0.00000000e+00]
+    #weights3 = [ 9878.92759633,  6925.17723541,  8409.42417137,  2802.47000224, 12541.71842095,     0.,            67.49230399,     0.]
+    #weights4 = [13081.15202581,  7010.96001766,  8946.29848726,  1436.13586, 12471.07134732,    55.06536039,  1825.44348792,     0.]
+    #weights5 = [7003.27925452, 3346.36051826, 7458.49385553,    0.,            0., 8326.21759809,    0.,            0.        ]
+    #weights6 = [9629.46897853, 7509.36946442, 8749.23007992,  310.83431354,    0. 5101.65244913, 8800.90642058,    0.        ]
+    #weights7 = [10535.47632218,  9809.79206833, 10400.05645389,    40.68995975,  0.,         14401.23722324,  1469.18933849,     0.]
+    #weights8 = [ 9024.7916147,   9227.932793,   11053.10593372,   125.45750208, 0.,         13973.06209992,  1778.91364358,     0.        ]
+
+
