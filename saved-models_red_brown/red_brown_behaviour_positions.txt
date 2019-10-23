@@ -1,0 +1,51 @@
+Following values needs to be replaced for manually creating Red_Brown Behaviour subpolicies in carmunk.py file
+
+Replace the following lines in the code with following values as required:
+
+This code can be found at Line 39 and Line 134 in the carmunk.py file.
+
+Line 39
+# Create the car.
+self.create_car(150, 20, 15)
+
+
+Line 134
+
+self.car_body.angle = 1.4
+
+change the matrix with any of the following values and you will find the toy car relocated when you run ManualControl.py file.
+
+Then guide it manually and save the weights of each of the eight sub policies.
+ 
+1) (150, 90, 15) angle=1.4
+
+2) (150, 650, 15) angle=45
+
+3) (950, 550, 15) angle=75
+
+4) (850, 450, 15) angle=400
+
+5) (350, 90, 15) angle=1.4
+
+6) (440, 330, 15) angle=75
+
+7) (350, 90, 15) angle=1.4
+
+8) (650, 90, 15) angle=1.4
+
+Videos of each subpolicies trained manually using manualContol.py file is also attached along the folder.
+
+Subpolicy weights of red_brown behaviour
+
+
+    #Yellow_Brown
+    #weights1 = [11652.97961532,  3485.28413042, 12282.39687071,  2399.60038426,  6707.39188801,     0.,          6824.0138868,      0.]
+    #weights2 = [12031.28573896,  5419.10727811,  7781.1400124,   2132.72097908,  6818.83310555,     0.,          6991.19670654,     0.]
+    #weights3 = [12967.58314534,  7410.86659565,  8499.74756889,   470.00234186,  3307.63194834,     30.93505122, 11603.11138576,    0.]
+    #weights4 = [12586.132007,    2304.88747211, 10812.66438951,  2419.11783494,  956.13530369,   4913.86688615,  7621.9964967,      0.]
+    #weights5 = [7003.27925452, 3346.36051826, 7458.49385553,    0.,            0., 8326.21759809,    0.,            0.        ]
+    #weights6 = [9629.46897853, 7509.36946442, 8749.23007992,  310.83431354,    0. 5101.65244913, 8800.90642058,    0.        ]
+    #weights7 = [10535.47632218,  9809.79206833, 10400.05645389,    40.68995975,  0.,         14401.23722324,  1469.18933849,     0.]
+    #weights8 = [ 9024.7916147,   9227.932793,   11053.10593372,   125.45750208, 0.,         13973.06209992,  1778.91364358,     0.        ]
+
+
