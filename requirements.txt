@@ -17,7 +17,7 @@ mkl-fft==1.0.14
 mkl-random==1.0.2
 mkl-service==2.0.2
 numpy==1.15.0
-protobuf==3.9.0
+protobuf==3.15.0
 pygame==1.9.4.dev0
 pymunk==4.0.0
 PyYAML==5.1.1
